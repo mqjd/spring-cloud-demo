@@ -1,0 +1,18 @@
+server:
+  port: 3006
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:3000/eureka/
+spring:
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/mqjd/spring-cloud-demo-config
+          searchPaths: configs
+          username:
+          password:
+  application:
+    name: server-config
